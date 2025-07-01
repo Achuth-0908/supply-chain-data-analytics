@@ -164,14 +164,6 @@ The system consists of the following interrelated tables:
 
 Make sure to use environment variables or a `.env` file to store your database credentials:
 
-
-Add `.env` to `.gitignore` to avoid committing it to GitHub.
-.env
-ORACLE_USER=sys
-ORACLE_PASSWORD=your_secure_password
-ORACLE_DSN=localhost:1522/orcl
----
-
 ## 🚀 How to Run
 
 1. Clone this repository  
