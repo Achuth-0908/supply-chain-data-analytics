@@ -1,10 +1,10 @@
-# 📊 Oracle-Based Supply Chain Data Management & Analytics System
+# Oracle-Based Supply Chain Data Management & Analytics System
 
 This project implements a complete backend utility system for managing and analyzing a **Supply Chain Database** using **Oracle SQL** and **Python (cx_Oracle)**. It includes data insertion, retrieval, and advanced analytical queries—ideal for data-driven dashboards or enterprise ERP systems.
 
 ---
 
-## 📂 Project Overview
+## Project Overview
 
 The database models a supply chain workflow including:
 - Suppliers and the products they offer
@@ -17,7 +17,7 @@ Python scripts connect to an Oracle Database to perform CRUD operations and exec
 
 ---
 
-## 🧱 Database Schema
+## Database Schema
 
 The system consists of the following interrelated tables:
 
@@ -136,21 +136,21 @@ The system consists of the following interrelated tables:
 
 ## ⚙️ Features
 
-✅ Modular Python functions for:
+Modular Python functions for:
 - Inserting and retrieving data from all major tables  
 - Executing advanced SQL-based analytical queries  
 
-✅ Analytical Functions:
-- 🧮 Product counts per supplier  
-- 📦 Inventory stock classification (Low/Medium/High)  
-- 🧾 Top 10 customers by purchase volume  
-- 📈 Average product price per category  
-- 🚚 Shipment delivery durations  
-- 🔄 Return rate summaries grouped by status  
+Analytical Functions:
+-  Product counts per supplier  
+-  Inventory stock classification (Low/Medium/High)  
+-  Top 10 customers by purchase volume  
+-  Average product price per category  
+-  Shipment delivery durations  
+-  Return rate summaries grouped by status  
 
 ---
 
-## 📊 Analytics Use Cases
+##  Analytics Use Cases
 
 - **Supplier Performance**: Analyze which suppliers contribute the most to product distribution  
 - **Inventory Management**: Detect low-stock items proactively  
@@ -160,13 +160,56 @@ The system consists of the following interrelated tables:
 
 ---
 
-## 🔐 Security Best Practices
+##  Security Best Practices
 
 Make sure to use environment variables or a `.env` file to store your database credentials:
+```bash
+# .env
+ORACLE_USER=sys
+ORACLE_PASSWORD=your_secure_password
+ORACLE_DSN=localhost:1522/orcl
+```
 
-## 🚀 How to Run
+Add `.env` to `.gitignore` to avoid committing it to GitHub.
 
-1. Clone this repository  
-2. Install dependencies:  
-   ```bash
-   pip install cx_Oracle python-dotenv
+---
+
+##  How to Run
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/supplychain-oracle-db.git
+cd supplychain-oracle-db
+```
+
+### 2. Set Up Oracle DB
+- Make sure Oracle DB is running locally on port `1522`
+- Create a user or use an existing one with access to the required schema
+
+### 3. Install Dependencies
+```bash
+pip install cx_Oracle python-dotenv
+```
+
+### 4. Load Environment Variables
+Create a `.env` file in the root directory:
+```bash
+ORACLE_USER=sys
+ORACLE_PASSWORD=your_password
+ORACLE_DSN=localhost:1522/orcl
+```
+
+### 5. Run Python Scripts
+```bash
+python db_utils.py  # or the appropriate script name
+```
+
+---
+
+## Author
+
+Developed by **Achuth G**  
+🔗 [Portfolio](https://achuthfolio.vercel.app)  
+✉️ achuthganesh09@gmail.com
+
+---
